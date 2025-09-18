@@ -13,9 +13,22 @@ variable "script_location" {
   type        = string
 }
 
+variable "number_of_workers" {
+  description = "The number of workers of a defined workerType that are allocated when a job runs."
+  type        = number
+  default     = 1
+}
+
+variable "worker_type" {
+  description = "The type of predefined worker that is allocated when a job runs."
+  type        = string
+  default     = "G.1X"
+}
+
 variable "max_concurrent_runs" {
   description = "The maximum number of concurrent runs for the Glue job."
   type        = number
+  default     = 1
 }
 
 variable "security_configuration" {

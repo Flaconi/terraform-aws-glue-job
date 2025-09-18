@@ -72,15 +72,33 @@ Description: The S3 location of the Glue job script.
 
 Type: `string`
 
+## Optional Inputs
+
+The following input variables are optional (have default values):
+
+### <a name="input_number_of_workers"></a> [number\_of\_workers](#input\_number\_of\_workers)
+
+Description: The number of workers of a defined workerType that are allocated when a job runs.
+
+Type: `number`
+
+Default: `1`
+
+### <a name="input_worker_type"></a> [worker\_type](#input\_worker\_type)
+
+Description: The type of predefined worker that is allocated when a job runs.
+
+Type: `string`
+
+Default: `"G.1X"`
+
 ### <a name="input_max_concurrent_runs"></a> [max\_concurrent\_runs](#input\_max\_concurrent\_runs)
 
 Description: The maximum number of concurrent runs for the Glue job.
 
 Type: `number`
 
-## Optional Inputs
-
-The following input variables are optional (have default values):
+Default: `1`
 
 ### <a name="input_security_configuration"></a> [security\_configuration](#input\_security\_configuration)
 

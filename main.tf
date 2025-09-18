@@ -20,8 +20,8 @@ resource "aws_glue_job" "this" {
     "--job-language"           = "python"
   }
 
-  number_of_workers      = 10
-  worker_type            = "G.1X"
+  number_of_workers      = var.number_of_workers
+  worker_type            = var.worker_type
   glue_version           = "5.0"
   timeout                = 2880
   security_configuration = var.security_configuration
