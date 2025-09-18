@@ -2,9 +2,10 @@
 
 This module creates an AWS Glue job using Terraform.
 
-[![lint](https://github.com/flaconi/terraform-cloudflare-worker/workflows/lint/badge.svg)](https://github.com/flaconi/terraform-cloudflare-worker/actions?query=workflow%3Alint)
-[![test](https://github.com/flaconi/terraform-cloudflare-worker/workflows/test/badge.svg)](https://github.com/flaconi/terraform-cloudflare-worker/actions?query=workflow%3Atest)
-[![Tag](https://img.shields.io/github/tag/flaconi/terraform-cloudflare-worker.svg)](https://github.com/flaconi/terraform-cloudflare-worker/releases)
+[![lint](https://github.com/flaconi/terraform-aws-glue-job/workflows/lint/badge.svg)](https://github.com/flaconi/terraform-aws-glue-job/actions?query=workflow%3Alint)
+[![test](https://github.com/flaconi/terraform-aws-glue-job/workflows/test/badge.svg)](https://github.com/flaconi/terraform-aws-glue-job/actions?query=workflow%3Atest)
+[![Tag](https://img.shields.io/github/tag/flaconi/terraform-aws-glue-job.svg)](https://github.com/flaconi/terraform-aws-glue-job/releases)
+[![Terraform](https://img.shields.io/badge/Terraform--registry-aws--glue--job-brightgreen.svg)](https://registry.terraform.io/modules/flaconi/glue-job/aws/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Usage
