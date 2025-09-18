@@ -13,14 +13,12 @@ This module creates an AWS Glue job using Terraform.
 module "glue_job" {
   source = "./path/to/this/module"
 
-  region                  = "eu-central-1"
-  glue_job_name           = "example-glue-job"
-  glue_job_role_arn       = "arn:aws:iam::123456789012:role/GlueJobRole"
-  script_location         = "s3://my-bucket/scripts/glue-job.py"
-  glue_job_max_capacity   = 2.0
-  glue_job_max_concurrent_runs = 1
-  security_configuration  = "my-security-configuration"
-  tags                    = {
+  name                   = "example-glue-job"
+  role_arn               = "arn:aws:iam::123456789012:role/GlueJobRole"
+  script_location        = "s3://my-bucket/scripts/glue-job.py"
+  max_concurrent_runs    = 1
+  security_configuration = "my-security-configuration"
+  tags = {
     Environment = "dev"
     Project     = "example"
   }
