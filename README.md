@@ -105,9 +105,9 @@ Default: `{}`
 
 | Name | Description |
 |------|-------------|
-| <a name="output_cloudwatch_log_group_name"></a> [cloudwatch\_log\_group\_name](#output\_cloudwatch\_log\_group\_name) | Name of the CloudWatch Log Group for the Glue job |
-| <a name="output_glue_job_id"></a> [glue\_job\_id](#output\_glue\_job\_id) | The ID of the Glue job. |
-| <a name="output_glue_job_name"></a> [glue\_job\_name](#output\_glue\_job\_name) | The name of the Glue job. |
+| <a name="output_id"></a> [id](#output\_id) | The ID of the Glue job. |
+| <a name="output_log_group_name"></a> [log\_group\_name](#output\_log\_group\_name) | Name of the CloudWatch Log Group for the Glue job |
+| <a name="output_name"></a> [name](#output\_name) | The name of the Glue job. |
 
 <!-- TFDOCS_OUTPUTS_END -->
 
