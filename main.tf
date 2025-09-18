@@ -1,6 +1,6 @@
 resource "aws_glue_job" "this" {
-  name     = var.glue_job_name
-  role_arn = var.glue_job_role_arn
+  name     = var.name
+  role_arn = var.role_arn
 
   command {
     name            = "glueetl"
@@ -9,7 +9,7 @@ resource "aws_glue_job" "this" {
   }
 
   execution_property {
-    max_concurrent_runs = var.glue_job_max_concurrent_runs
+    max_concurrent_runs = var.max_concurrent_runs
   }
 
   default_arguments = {

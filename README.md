@@ -13,14 +13,12 @@ This module creates an AWS Glue job using Terraform.
 module "glue_job" {
   source = "./path/to/this/module"
 
-  region                  = "eu-central-1"
-  glue_job_name           = "example-glue-job"
-  glue_job_role_arn       = "arn:aws:iam::123456789012:role/GlueJobRole"
-  script_location         = "s3://my-bucket/scripts/glue-job.py"
-  glue_job_max_capacity   = 2.0
-  glue_job_max_concurrent_runs = 1
-  security_configuration  = "my-security-configuration"
-  tags                    = {
+  name                   = "example-glue-job"
+  role_arn               = "arn:aws:iam::123456789012:role/GlueJobRole"
+  script_location        = "s3://my-bucket/scripts/glue-job.py"
+  max_concurrent_runs    = 1
+  security_configuration = "my-security-configuration"
+  tags = {
     Environment = "dev"
     Project     = "example"
   }
@@ -56,13 +54,13 @@ module "glue_job" {
 
 The following input variables are required:
 
-### <a name="input_glue_job_name"></a> [glue\_job\_name](#input\_glue\_job\_name)
+### <a name="input_name"></a> [name](#input\_name)
 
 Description: The name of the Glue job.
 
 Type: `string`
 
-### <a name="input_glue_job_role_arn"></a> [glue\_job\_role\_arn](#input\_glue\_job\_role\_arn)
+### <a name="input_role_arn"></a> [role\_arn](#input\_role\_arn)
 
 Description: The ARN of the IAM role for the Glue job.
 
@@ -74,7 +72,7 @@ Description: The S3 location of the Glue job script.
 
 Type: `string`
 
-### <a name="input_glue_job_max_concurrent_runs"></a> [glue\_job\_max\_concurrent\_runs](#input\_glue\_job\_max\_concurrent\_runs)
+### <a name="input_max_concurrent_runs"></a> [max\_concurrent\_runs](#input\_max\_concurrent\_runs)
 
 Description: The maximum number of concurrent runs for the Glue job.
 
@@ -107,9 +105,9 @@ Default: `{}`
 
 | Name | Description |
 |------|-------------|
-| <a name="output_cloudwatch_log_group_name"></a> [cloudwatch\_log\_group\_name](#output\_cloudwatch\_log\_group\_name) | Name of the CloudWatch Log Group for the Glue job |
-| <a name="output_glue_job_id"></a> [glue\_job\_id](#output\_glue\_job\_id) | The ID of the Glue job. |
-| <a name="output_glue_job_name"></a> [glue\_job\_name](#output\_glue\_job\_name) | The name of the Glue job. |
+| <a name="output_id"></a> [id](#output\_id) | The ID of the Glue job. |
+| <a name="output_log_group_name"></a> [log\_group\_name](#output\_log\_group\_name) | Name of the CloudWatch Log Group for the Glue job |
+| <a name="output_name"></a> [name](#output\_name) | The name of the Glue job. |
 
 <!-- TFDOCS_OUTPUTS_END -->
 
