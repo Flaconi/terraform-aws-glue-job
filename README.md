@@ -56,13 +56,13 @@ module "glue_job" {
 
 The following input variables are required:
 
-### <a name="input_job_name"></a> [job\_name](#input\_job\_name)
+### <a name="input_name"></a> [name](#input\_name)
 
 Description: The name of the Glue job.
 
 Type: `string`
 
-### <a name="input_job_role_arn"></a> [job\_role\_arn](#input\_job\_role\_arn)
+### <a name="input_role_arn"></a> [role\_arn](#input\_role\_arn)
 
 Description: The ARN of the IAM role for the Glue job.
 
@@ -74,7 +74,7 @@ Description: The S3 location of the Glue job script.
 
 Type: `string`
 
-### <a name="input_job_max_concurrent_runs"></a> [job\_max\_concurrent\_runs](#input\_job\_max\_concurrent\_runs)
+### <a name="input_max_concurrent_runs"></a> [max\_concurrent\_runs](#input\_max\_concurrent\_runs)
 
 Description: The maximum number of concurrent runs for the Glue job.
 
