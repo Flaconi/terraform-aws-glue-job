@@ -1,9 +1,9 @@
-variable "glue_job_name" {
+variable "job_name" {
   description = "The name of the Glue job."
   type        = string
 }
 
-variable "glue_job_role_arn" {
+variable "job_role_arn" {
   description = "The ARN of the IAM role for the Glue job."
   type        = string
 }
@@ -13,7 +13,7 @@ variable "script_location" {
   type        = string
 }
 
-variable "glue_job_max_concurrent_runs" {
+variable "job_max_concurrent_runs" {
   description = "The maximum number of concurrent runs for the Glue job."
   type        = number
 }
