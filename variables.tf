@@ -49,6 +49,12 @@ variable "additional_python_modules" {
   default     = []
 }
 
+variable "additional_arguments" {
+  description = "Additional custom default arguments to pass to the Glue job. Each key-value pair will be added to default_arguments."
+  type        = map(string)
+  default     = {}
+}
+
 variable "tags" {
   description = "Tags to apply to the Glue job."
   type        = map(string)

@@ -24,7 +24,8 @@ resource "aws_glue_job" "this" {
     length(var.additional_python_modules) > 0 ? {
       "--additional-python-modules"       = join(",", var.additional_python_modules)
       "--python-modules-installer-option" = "--no-index"
-    } : {}
+    } : {},
+    var.additional_arguments
   )
 
   number_of_workers      = var.number_of_workers

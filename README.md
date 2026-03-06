@@ -21,6 +21,10 @@ module "glue_job" {
   security_configuration    = "my-security-configuration"
   python_library_paths      = ["s3://my-bucket/libs/my_lib.whl", "s3://my-bucket/libs/other.zip"]
   additional_python_modules = ["pandas==1.5.0", "numpy==1.23.0"]
+  additional_arguments = {
+    "--conf" = "spark.sql.shuffle.partitions=100"
+    "--TempDir" = "s3://my-bucket/temp/"
+  }
   tags = {
     Environment = "dev"
     Project     = "example"
@@ -126,6 +130,14 @@ Description: The S3 path(s) to additional Python module(s) to install. Maps to -
 Type: `list(string)`
 
 Default: `[]`
+
+### <a name="input_additional_arguments"></a> [additional\_arguments](#input\_additional\_arguments)
+
+Description: Additional custom default arguments to pass to the Glue job. Each key-value pair will be added to default\_arguments.
+
+Type: `map(string)`
+
+Default: `{}`
 
 ### <a name="input_tags"></a> [tags](#input\_tags)
 
