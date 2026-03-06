@@ -37,6 +37,18 @@ variable "security_configuration" {
   default     = null
 }
 
+variable "python_library_paths" {
+  description = "The S3 path(s) to additional Python files. Maps to --extra-py-files."
+  type        = list(string)
+  default     = []
+}
+
+variable "additional_python_modules" {
+  description = "The S3 path(s) to additional Python module(s) to install. Maps to --additional-python-modules."
+  type        = list(string)
+  default     = []
+}
+
 variable "tags" {
   description = "Tags to apply to the Glue job."
   type        = map(string)

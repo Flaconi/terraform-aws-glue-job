@@ -14,11 +14,13 @@ This module creates an AWS Glue job using Terraform.
 module "glue_job" {
   source = "./path/to/this/module"
 
-  name                   = "example-glue-job"
-  role_arn               = "arn:aws:iam::123456789012:role/GlueJobRole"
-  script_location        = "s3://my-bucket/scripts/glue-job.py"
-  max_concurrent_runs    = 1
-  security_configuration = "my-security-configuration"
+  name                      = "example-glue-job"
+  role_arn                  = "arn:aws:iam::123456789012:role/GlueJobRole"
+  script_location           = "s3://my-bucket/scripts/glue-job.py"
+  max_concurrent_runs       = 1
+  security_configuration    = "my-security-configuration"
+  python_library_paths      = ["s3://my-bucket/libs/my_lib.whl", "s3://my-bucket/libs/other.zip"]
+  additional_python_modules = ["pandas==1.5.0", "numpy==1.23.0"]
   tags = {
     Environment = "dev"
     Project     = "example"
@@ -108,6 +110,22 @@ Description: The security configuration for the Glue job.
 Type: `string`
 
 Default: `null`
+
+### <a name="input_python_library_paths"></a> [python\_library\_paths](#input\_python\_library\_paths)
+
+Description: The S3 path(s) to additional Python files. Maps to --extra-py-files.
+
+Type: `list(string)`
+
+Default: `[]`
+
+### <a name="input_additional_python_modules"></a> [additional\_python\_modules](#input\_additional\_python\_modules)
+
+Description: The S3 path(s) to additional Python module(s) to install. Maps to --additional-python-modules.
+
+Type: `list(string)`
+
+Default: `[]`
 
 ### <a name="input_tags"></a> [tags](#input\_tags)
 
